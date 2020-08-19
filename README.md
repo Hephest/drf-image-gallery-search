@@ -2,6 +2,11 @@
 
 Image gallery search based on Django REST Framework.
 
+[![Build Status](https://travis-ci.org/Hephest/drf-image-gallery-search.svg?branch=master)](https://travis-ci.org/Hephest/drf-image-gallery-search)
+![GitHub last commit](https://img.shields.io/github/last-commit/Hephest/drf-image-gallery-search)
+[![Updates](https://pyup.io/repos/github/Hephest/drf-image-gallery-search/shield.svg)](https://pyup.io/repos/github/Hephest/drf-image-gallery-search/)
+[![Python 3](https://pyup.io/repos/github/Hephest/drf-image-gallery-search/python-3-shield.svg)](https://pyup.io/repos/github/Hephest/drf-image-gallery-search/)
+
 ## Table of Contents
 
 - [Features](#features)
@@ -17,6 +22,7 @@ Image gallery search based on Django REST Framework.
 - PostgreSQL 12.3+
 - Fully dockerized, local development via `docker-compose`
 - Travis CI support
+- Dependencies and security updates enforced by [pyup.io](https://pyup.io/)
 - Linting tools support (`isort`, `flake8`)
 
 ## Getting Started
