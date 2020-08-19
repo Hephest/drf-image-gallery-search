@@ -1,6 +1,24 @@
 version: '3'
 
 services:
+    redis:
+        image: redis
+    celery:
+        build: .
+        command: celery -A imagesearch worker -l info
+        volumes:
+            - .:/code
+        env_file: .env
+        depends_on:
+          - redis
+    celery-beat:
+        build: .
+        command: celery -A imagesearch beat -l info
+        volumes:
+            - .:/code
+        env_file: .env
+        depends_on:
+            - redis
     db:
         image: postgres
         environment:
@@ -17,3 +35,4 @@ services:
             - "8000:8000"
         depends_on:
             - db
+            - redis

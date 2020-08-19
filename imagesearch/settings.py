@@ -2,6 +2,9 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from celery.schedules import crontab
+import gallery.tasks
+
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 
@@ -124,3 +127,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Celery
+CELERY_BROKER_URL = 'redis://redis:6379'
+CELERY_RESULT_BACKEND = 'redis://redis:6379'
+
+CELERY_BEAT_SCHEDULE = {
+    'update_pictures_task': {
+        'task': 'gallery.tasks.update_pictures_task',
+        'schedule': crontab(hour='*/1'),
+    },
+}

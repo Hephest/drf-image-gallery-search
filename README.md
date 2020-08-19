@@ -21,6 +21,7 @@ Image gallery search based on Django REST Framework.
 - Django REST Framework 3.11+
 - PostgreSQL 12.3+
 - Fully dockerized, local development via `docker-compose`
+- Caching support via `Redis` and `Celery`
 - Travis CI support
 - Testing with `coverage` and `nose` test runner
 - Dependencies and security updates enforced by [pyup.io](https://pyup.io/)
