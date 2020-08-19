@@ -14,6 +14,7 @@ Image gallery search based on Django REST Framework.
     - [Prerequisites](#prerequisites)
     - [Installing](#installing)
     - [Development](#development)
+    - [Utilities](#utilities)
 - [TODO List](#todo-list)
 
 ## Features
@@ -80,6 +81,17 @@ Run docker-compose:
         flake8
         
 5. After `git push`, check Travis CI build for possible errors
+
+### Utilities
+
+Utility methods provided in `gallery/utils.py`.
+
+| Method name | Returns | Description |
+| ----------- | ------- | ----------- |
+| `api_get_token` | Access token (`str`) | Receive an access token from external API |
+| `api_get_images_pages_count` | Pages count (`int`) | Receive total pages count value from external API |
+| `api_get_images_id` | Pictures id list (`list`) | Receive list with pictures id from external API |
+| `build_images_urls` | List of picture urls (`list`) | Build a list of valid URLs for every picture |
 
 ## TODO List
 

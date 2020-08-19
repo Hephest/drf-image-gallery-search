@@ -1,7 +1,7 @@
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
 from django.views.decorators.vary import vary_on_cookie
-from rest_framework import viewsets, generics, filters
+from rest_framework import filters, generics, viewsets
 
 from gallery.models import Picture
 from gallery.serializers import PictureSerializer

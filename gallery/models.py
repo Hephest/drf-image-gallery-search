@@ -11,4 +11,3 @@ class Picture(models.Model):
 
     def __str__(self):
         return 'Picture {}'.format(self.id)
-

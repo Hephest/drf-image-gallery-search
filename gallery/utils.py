@@ -61,5 +61,7 @@ def build_images_urls():
 
     return data
 
+
 def write_image_data():
-    """Write image data inside"""
+    """Write image data inside database"""
+    pass
