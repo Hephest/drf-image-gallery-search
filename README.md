@@ -84,5 +84,5 @@ Run docker-compose:
 ## TODO List
 
 - [ ] Celery task for receiving pictures
-- [ ] `/search/` API endpoint
+- [x] `/search/` API endpoint
 - [x] Redis as default cache backend

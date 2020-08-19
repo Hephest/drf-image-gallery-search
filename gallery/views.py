@@ -1,7 +1,7 @@
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
 from django.views.decorators.vary import vary_on_cookie
-from rest_framework import viewsets
+from rest_framework import viewsets, generics, filters
 
 from gallery.models import Picture
 from gallery.serializers import PictureSerializer
@@ -18,3 +18,15 @@ class PictureViewSet(viewsets.ReadOnlyModelViewSet):
     @method_decorator(cache_page(60 * 60))
     def dispatch(self, *args, **kwargs):
         return super(PictureViewSet, self).dispatch(*args, **kwargs)
+
+
+class PictureSearchAPIView(generics.RetrieveAPIView):
+    queryset = Picture.objects.all()
+    serializer_class = PictureSerializer
+    search_fields = (
+        'picture_id',
+        'author',
+        'camera',
+        'tags'
+    )
+    filter_backends = (filters.SearchFilter,)
