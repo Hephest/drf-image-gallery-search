@@ -60,3 +60,6 @@ def build_images_urls():
         data.append(picture_url)
 
     return data
+
+def write_image_data():
+    """Write image data inside"""

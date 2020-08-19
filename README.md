@@ -14,6 +14,7 @@ Image gallery search based on Django REST Framework.
     - [Prerequisites](#prerequisites)
     - [Installing](#installing)
     - [Development](#development)
+- [TODO List](#todo-list)
 
 ## Features
 
@@ -79,3 +80,9 @@ Run docker-compose:
         flake8
         
 5. After `git push`, check Travis CI build for possible errors
+
+## TODO List
+
+- [ ] Celery task for receiving pictures
+- [ ] `/search/` API endpoint
+- [x] Redis as default cache backend

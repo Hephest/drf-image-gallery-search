@@ -7,6 +7,7 @@ requests==2.24.0
 # Caching
 celery==4.4.7
 redis==3.5.3
+django-redis==4.12.1
 
 # Linting
 flake8==3.8.3
