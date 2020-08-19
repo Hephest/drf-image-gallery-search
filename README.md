@@ -22,6 +22,7 @@ Image gallery search based on Django REST Framework.
 - PostgreSQL 12.3+
 - Fully dockerized, local development via `docker-compose`
 - Travis CI support
+- Testing with `coverage` and `nose` test runner
 - Dependencies and security updates enforced by [pyup.io](https://pyup.io/)
 - Linting tools support (`isort`, `flake8`)
 
@@ -67,6 +68,8 @@ Run docker-compose:
 2. Write code and tests accordingly to your pipeline or development technology (TDD, DDD etc.)
 3. Run tests via `docker-compose`:
 
+        docker-compose run web python manage.py makemigrations
+        docker-compose run web python manage.py migrate
         docker-compose run web python manage.py test
         
 4. Before `git commit`, make sure to check your code with `isort` and `flake8` manually:
