@@ -56,6 +56,8 @@ Create and fill .env file (example below):
     DB_HOST = 'db'
     DB_PORT = 5432
 
+    API_KEY = <API key>
+
 Run docker-compose:
 
     docker-compose up
