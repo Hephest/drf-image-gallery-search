@@ -1,8 +1,9 @@
 # Base
 Django==3.1.4
 psycopg2-binary==2.8.6
+
 djangorestframework==3.12.2
-requests==2.24.0
+requests==2.25.0
 
 # Caching
 celery==4.4.7
